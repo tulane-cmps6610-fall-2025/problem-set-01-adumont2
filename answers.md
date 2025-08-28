@@ -25,7 +25,17 @@ Place all written answers from `assignment-01.md` here for easier grading.
     Since we found constants $c \ge 2$ and $n_0 = 0$ that satisfy the definition, $2^{n+1}$ is in $O({2^n})$. 
 
 
-  - 1b    
+  - 1b  **FALSE. No**, $2^{2^n} \in O(2^n)$.
+
+    **Reasoning:** In class we have demonstrated that any polylogarithmic function grows slower than any polynomial function. Expressed differently, $log^i(n) \in O(n^j)$ $\forall$ $i, j \gt 0$. Conversely $n^j \in \Omega(log^i(n))$ $\forall$ $i, j \gt 0$
+
+    Let $f(n) = 2^{2^n}$ and $g(n) = 2^n$.
+    
+    Inequality: $2^{2^n} \le c \cdot 2^n$. We must check if there is a constant c that satisfies this
+    
+    Take $log_2$ of both sides.
+
+    $2^n \le c \cdot n$   
  
   - 1c
 
