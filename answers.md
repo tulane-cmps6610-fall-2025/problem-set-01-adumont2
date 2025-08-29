@@ -63,8 +63,12 @@ Place all written answers from `assignment-01.md` here for easier grading.
   - 1g
     We will assume that there exists a function, $f(n)$, in the intersection of $o(g(n))$ and $\omega(g(n))$. By definition:
 
-    1. $f(n) \in o(g(n))$, for any constant $c_1 \gt 0$ and there is an $n_1$ such that $f(n) \lt f(n)$ for all $n \ge n_2$.
-    2. 
+    1. $f(n) \in o(g(n))$, for any constant $c_1 \gt 0$ and there is an $n_1$ such that $f(n) \lt c_1g(n)$ for all $n \ge n_1$.
+    2. $f(n) \in \omega(g(n))$, for any constant $c2 \gt 0$ and there is an $n_2$ such that $c_2g(n) \lt f(n)$ for all $n \ge n_2$.
+
+    The above must hold for every positive constant c. So let $c_1 = c_2$. We can also select $n_0 = max (n_1, n_2)$.By selecting  $n_0 = max (n_1, n_2)$, we establish a threshold. For any $n \ge n_0$, we are guaranteed that $n \ge n_1$ AND $n \ge n_2$, meaning both inequalities must hold. Therfore:
+
+    $c_2g(n) \lt f(n) \lt c_1g(n)$. $c_1 = c_2$. Therefore, $c_1g(n) \lt f(n) \lt c_1g(n)$. Since this is a strict inequality definition, there is no $f(n)$ that exists to satisfy this strict inequality.
 2. **SPARC to Python**
 
   - 2b
