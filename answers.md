@@ -31,20 +31,35 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
     Let $f(n) = 2^{2^n}$ and $g(n) = 2^n$.
     
-    Inequality: $2^{2^n} \le c \cdot 2^n$. We must check if there is a constant c that satisfies this
+    Inequality: $2^{2^n} \le c \cdot 2^n$. We must check if there is a constant c that satisfies this.
+
+    Let $a = 2^n$
+
+    THen $2^a \le c \cdot a$.
     
     Take $log_2$ of both sides.
 
-    $2^n \le c \cdot n$   
+    $a \le log_2 c + log_2a$
+
+    Therefore there is no c that satisfies this inequality as the left polynomial which grows lineraly always grows faster than the right polylogarithmic function.   
  
   - 1c
+    **FALSE. No**, $n^{1.01} \in O(log^2n)$.
 
+    **Reasoning:** As above, any polylogarithmic function grows slower than any polynomial function. Expressed differently, $log^i(n) \in O(n^j)$ $\forall$ $i, j \gt 0$. Conversely $n^j \in \Omega(log^i(n))$ $\forall$ $i, j \gt 0$. The polynomial function $n^{1.01}$ grows much faster than a constant multiple of $logn$ (in this case $log^2n$).
   - 1d
+    **TRUE. Yes**, $n^{1.01} \in \Omega(log^2n)$.
 
+    **Reasoning:** As above,as we have shown in class, $n^j \in \Omega(log^i(n))$ $\forall$ $i, j \gt 0$.Therefore, the statement is true.
   - 1e
+    **FALSE. No**, $\sqrt{n} \in O(log^3n)$.
+
+    **Reasoning:** As above, any polylogarithmic function grows slower than any polynomial function. Expressed differently, $log^i(n) \in O(n^j)$ $\forall$ $i, j \gt 0$. Conversely $n^j \in \Omega(log^i(n))$ $\forall$ $i, j \gt 0$. The polynomial function $\sqrt{n}$ which is $n^{0.5}$ grows faster than a constant multiple of $logn$ (in this case $log^3n$).
 
   - 1f
+     **TRUE. Yes**, $\sqrt{n} \in \Omega(log^3n)$.
 
+    **Reasoning:** As above,as we have shown in class, $n^j \in \Omega(log^i(n))$ $\forall$ $i, j \gt 0$.Therefore, the statement is true.
   - 1g
 
 2. **SPARC to Python**
