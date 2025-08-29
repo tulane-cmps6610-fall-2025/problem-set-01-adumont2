@@ -61,7 +61,10 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
     **Reasoning:** As above,as we have shown in class, $n^j \in \Omega(log^i(n))$ $\forall$ $i, j \gt 0$.Therefore, the statement is true.
   - 1g
+    We will assume that there exists a function, $f(n)$, in the intersection of $o(g(n))$ and $\omega(g(n))$. By definition:
 
+    1. $f(n) \in o(g(n))$, for any constant $c_1 \gt 0$ and there is an $n_1$ such that $f(n) \lt f(n)$ for all $n \ge n_2$.
+    2. 
 2. **SPARC to Python**
 
   - 2b
