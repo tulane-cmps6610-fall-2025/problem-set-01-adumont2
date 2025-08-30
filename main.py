@@ -103,4 +103,51 @@ def longest_run_recursive(mylist, key):
 def test_longest_run():
     assert longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3
 
+def test_longest_run_recursive():
+    print("\n--- Running tests for longest_run_recursive ---")
 
+    # Test Case 1: The example from the problem
+    array1 = [2,12,12,8,12,12,12,0,12,1]
+    key1 = 12
+    result1 = longest_run_recursive(array1, key1)
+    
+    # We check the .longest_size attribute of the result object
+    assert result1.longest_size == 3
+    # Let's also check the other attributes for this case
+    assert result1.left_size == 0 # Run does not start at the beginning
+    assert result1.right_size == 0 # Run does not end at the end
+    assert result1.is_entire_range == False
+    print("Test 1 PASSED")
+
+    # Test Case 2: Run at the end
+    array2 = [1, 2, 5, 5, 5, 5]
+    key2 = 5
+    result2 = longest_run_recursive(array2, key2)
+    assert result2.longest_size == 4
+    assert result2.right_size == 4
+    print("Test 2 PASSED")
+
+    # Test Case 3: Empty array
+    array3 = []
+    key3 = 6
+    result3 = longest_run_recursive(array3, key3)
+    assert result3.longest_size == 0
+    print("Test 3 PASSED")
+
+    # Test Case 4: The entire array is a run
+    array4 = [7, 7, 7, 7]
+    key4 = 7
+    result4 = longest_run_recursive(array4, key4)
+    assert result4.longest_size == 4
+    assert result4.left_size == 4
+    assert result4.right_size == 4
+    assert result4.is_entire_range == True
+    print("Test 4 PASSED")
+
+    print("\nAll recursive tests passed successfully!")
+
+# Call to new test function in the main execution block
+if __name__ == "__main__":
+    # You can test both functions at once if you like
+    # test_longest_run() 
+    test_longest_run_recursive()
