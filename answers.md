@@ -103,8 +103,24 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
     The span is the longest chain of dependent operations, representing the runtime with infinite processors. Our implementation in this algorithm is sequential (no parallelism). Therefore, span is also proportional to n.
 
     $S(n) = O(n)
+
   - 3d
 
+    $n$ is the length of mylist.
+
+    **Work**: Work is the total number of operations. This function splits the problem into 2 subproblems of size $n/2$ and then does a constant amount of work ($O(1)$) to combine them. 
+    
+    Therefore $W(n) = 2W(n/2) + O(1)$. 
+    
+    n= $s^h$ so $log_2(n) = log_2(2^h)$ and $h = log_2(n)$. Number of leaves = $2^h$ which is $2^(log_2(n))$ which is $n$.This simplifies to $W(n) \in O(n)$.
+
+    **Span**: Span is the longest dependency path. As a result of the two recursive calls, longest_run_recursive(left_half, ...) and longest_run_recursive(right_half, ...) are still being run **sequentially**. Therefore the Span and Work are the same.
+
+    $S(n) = 2S(n/2) + O(1)$. This simplifies to $S(n) \in O(n)$. 
+
   - 3e
+    **Work**: Work is the total number of operations. This function splits the problem into 2 subproblems of size $n/2$ and then does a constant amount of work ($O(1)$) to combine them. The work **remains the same**.
+    
+    Therefore $W(n) = 2W(n/2) + O(1)$. 
   
 4. **GCD**
