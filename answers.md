@@ -77,6 +77,15 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
   Note: If the function in SPARC had (foo x, y mod x) instead of (foo y, y mod x), this would be the Euclidean algorithm and would return the greatest common divisor (GCD). The function foo(a, b) calculates the Greatest Common Divisor (GCD) of two non-negative integers a and b under this modified algorithm. 
 
+- 2c - 
+**Analysis**:
+
+Algorithm: $y= max(a,b)$ is constant. $foo(y,b_i)$ calls $foo(y,y\%b_i)$.  
+
+**Work**: The total number of operations, equivalent to the time it would take on a single processor.
+
+
+**Span**: Span (or depth) is the longest chain of dependent operations, which represents the execution time on an infinite number of processors.
 3. **Parallelism and recursion**
 
   - 3b
