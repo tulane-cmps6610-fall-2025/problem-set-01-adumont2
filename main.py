@@ -103,6 +103,25 @@ def longest_run_recursive(mylist, key):
 def test_longest_run():
     assert longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3
 
+def test_longest_run2():
+    print("\n--- Running tests for longest_run (iterative) ---")
+
+    # Test Case 1: The original test
+    array1 = [2,12,12,8,12,12,12,0,12,1]
+    key1 = 12
+    result1 = longest_run(array1, key1)
+    assert result1 == 3
+    print("Test 1 PASSED")
+
+    # Test Case 2: A run at the end of the array
+    array2 = [1, 2, 5, 5, 5, 5]
+    key2 = 5
+    result2 = longest_run(array2, key2)
+    assert result2 == 4
+    print("Test 2 PASSED")
+    
+    print("\nAll iterative tests passed successfully!")
+
 def test_longest_run_recursive():
     print("\n--- Running tests for longest_run_recursive ---")
 
@@ -149,5 +168,6 @@ def test_longest_run_recursive():
 # Call to new test function in the main execution block
 if __name__ == "__main__":
     # You can test both functions at once if you like
-    # test_longest_run() 
+    test_longest_run() 
+    test_longest_run2()
     test_longest_run_recursive()
