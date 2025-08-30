@@ -71,7 +71,11 @@ Place all written answers from `assignment-01.md` here for easier grading.
     $c_2g(n) \lt f(n) \lt c_1g(n)$. $c_1 = c_2$. Therefore, $c_1g(n) \lt f(n) \lt c_1g(n)$. Since this is a strict inequality definition, there is no $f(n)$ that exists to satisfy this strict inequality.
 2. **SPARC to Python**
 
-  - 2b
+  - 2a - See main.py
+
+  - 2b - This function takes two numbers as input, checks if the base case is true and than recursively returns the maximum of the two numbers and the remainder of y maximum divided by the mininum number. The recursion only works on the second argument, which is repeatedly replaced by y % (current_second_arg). Eventually, the second argument will become 0, and the function will return the first argument, which has been max(a, b) all along. In my own words, the function computes the maximum of two non-negative integers. For any inputs a and b, foo(a, b) will return max(a, b).
+
+  Note: If the function in SPARC had (foo x, y mod x) instead of (foo y, y mod x), this would be the Euclidean algorithm and would return the greatest common divisor (GCD). The function foo(a, b) calculates the Greatest Common Divisor (GCD) of two non-negative integers a and b under this modified algorithm. 
 
 3. **Parallelism and recursion**
 
