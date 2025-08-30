@@ -56,8 +56,48 @@ class Result:
     
     
 def longest_run_recursive(mylist, key):
-    ### TODO
-    pass
+    #Base case: If the list is empty or has one element, we can solve it directly.
+    if len(mylist) <=1:
+        if len(mylist) == 1 and mylist[0] == key:
+            # A list of one element that matches the key has a longest run of 1.
+            return Result(1, 1, 1, True)
+        else:
+            #Empt list or a list with one element that doesn't match the key has longest run of 0.
+            return Result(0, 0, 0, False)
+    
+    #Recursive case: 
+    # Divide: Split the list in half and solve each half recursively.
+    mid = len(mylist) // 2
+    left_half = mylist[:mid]
+    right_half = mylist[mid:]
+
+    #Conquer: Solve each half recursively.
+    left_result = longest_run_recursive(left_half, key)
+    right_result = longest_run_recursive(right_half, key)
+
+    #Combine: Combine the results from the two halves to solve the original problem.
+
+    #Calculate the combined left_size.
+    combined_left_size = left_result.left_size
+    if left_result.is_entire_range and len(left_half) > 0:
+        combined_left_size += right_result.left_size
+    
+    #Calculate the combined right_size.
+    combined_right_size = right_result.right_size
+    if right_result.is_entire_range and len(right_half) > 0:
+        combined_right_size += left_result.right_size
+    
+    #Calculate the longest run that could cross the midpoint.
+    cross_midpoint_run = left_result.rightsize + right_result.left_size
+
+    # The new longest run is the max of the longest in the left, the longest in the right,
+    # and the one that crosses the middle.
+    combined_longest_size = max(left_result.longest_size, right_result.longest_size, cross_midpoint_run)
+
+    # The entire range is the key only if both sub-ranges are.
+    combined_is_entire_range = left_result.is_entire_range and right_result.is_entire_range
+
+    return Result(combined_left_size, combined_right_size, combined_longest_size, combined_is_entire_range)
 
 ## Feel free to add your own tests here.
 def test_longest_run():
