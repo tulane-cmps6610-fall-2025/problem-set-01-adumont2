@@ -112,7 +112,7 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
     
     Therefore $W(n) = 2W(n/2) + O(1)$. 
     
-    n= $s^h$ so $log_2(n) = log_2(2^h)$ and $h = log_2(n)$. Number of leaves = $2^h$ which is $2^(log_2(n))$ which is $n$.This simplifies to $W(n) \in O(n)$.
+    n= $s^h$ so $log_2(n) = log_2(2^h)$ and $h = log_2(n)$. Number of leaves = $2^h$ which is $2^(log_2(n))$ which is $n$. This simplifies to $W(n) \in O(n)$.
 
     **Span**: Span is the longest dependency path. As a result of the two recursive calls, longest_run_recursive(left_half, ...) and longest_run_recursive(right_half, ...) are still being run **sequentially**. Therefore the Span and Work are the same.
 
@@ -121,6 +121,10 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
   - 3e
     **Work**: Work is the total number of operations. This function splits the problem into 2 subproblems of size $n/2$ and then does a constant amount of work ($O(1)$) to combine them. The work **remains the same**.
     
-    Therefore $W(n) = 2W(n/2) + O(1)$. 
+    Therefore $W(n) = 2W(n/2) + O(1)$. This simplifies to $W(n) \in O(n)$ as reasoned above.
+
+    **Span**: Span is the longest dependency path. As a result of the two recursive calls, longest_run_recursive(left_half, ...) and longest_run_recursive(right_half, ...) are now being run **in parallel**. Therefore the Span is the height of the tree as the algorithm is operating in parallel:
+
+    $S(n) = S(n/2) + O(1)$. We have shown above that the height of the tree, $h$, is $log_2(n)$. This simplifies to $S(n) \in O(logn)$. 
   
 4. **GCD**

@@ -88,7 +88,7 @@ def longest_run_recursive(mylist, key):
         combined_right_size += left_result.right_size
     
     #Calculate the longest run that could cross the midpoint.
-    cross_midpoint_run = left_result.rightsize + right_result.left_size
+    cross_midpoint_run = left_result.right_size + right_result.left_size
 
     # The new longest run is the max of the longest in the left, the longest in the right,
     # and the one that crosses the middle.
