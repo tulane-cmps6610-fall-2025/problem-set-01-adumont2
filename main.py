@@ -14,9 +14,24 @@ def foo(a, b):
         return foo (y, y % x)
 
 
-def longest_run(mylist, key):
-    ### TODO
-    pass
+def longest_run(myarray, key):
+    """
+    Input:
+      `myarray`: a list of ints
+      `key`: an int
+    Return:
+      the longest continuous sequence of `key` in `myarray`
+    """
+    current_run = 0
+    longest_run = 0
+    for item in myarray:
+        if item == key:
+            current_run += 1
+            longest_run = max(longest_run, current_run)
+        else:
+            current_run = 0
+    return longest_run
+
 
 
 class Result:
