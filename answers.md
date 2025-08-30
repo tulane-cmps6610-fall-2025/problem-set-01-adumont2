@@ -80,12 +80,19 @@ Place all written answers from `assignment-01.md` here for easier grading.
 - 2c - 
 **Analysis**:
 
-Algorithm: $y= max(a,b)$ is constant. $foo(y,b_i)$ calls $foo(y,y\%b_i)$.  
+Algorithm: $y= max(a,b)$ is constant. $foo(y,b_i)$ calls $foo(y,y\%b_i)$.   
 
-**Work**: The total number of operations, equivalent to the time it would take on a single processor.
+In each recursive call, a constant number of operations is performed: 2 comparisons, a min, a max, a mod, and the function call itself. This is constant work O(1). In terms of the number of recursive calls, the second argument gets smaller with each step until it becomes 0.The sequence if $b_0 = \min(a,b)$, $b_1 = y \% b_0$, $b_2 = y \% b_1, etc. The number of steps is logarithmic in the value of the inputs ie. $O(log(min(a,b)))$.
+
+**Work**: The total number of operations, equivalent to the time it would take on a single processor. Work = work per step * # of steps.
+
+$W(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 
 
-**Span**: Span (or depth) is the longest chain of dependent operations, which represents the execution time on an infinite number of processors.
+**Span**: Span (or depth) is the longest chain of dependent operations, which represents the execution time on an infinite number of processors. This is a completely sequential algorithm as each call depends on the result of the next one. So the Span will be the same as work.
+
+$S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
+
 3. **Parallelism and recursion**
 
   - 3b
