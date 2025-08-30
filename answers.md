@@ -94,6 +94,7 @@ $W(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 
 3. **Parallelism and recursion**
+  - 3a - See longest_run in main.py
 
   - 3b
 
