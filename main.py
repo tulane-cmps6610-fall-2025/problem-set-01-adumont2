@@ -26,7 +26,12 @@ def longest_run(myarray, key):
     longest_run = 0
     for item in myarray:
         if item == key:
+            # If we find the key, we're in a run. Increment the current counter.
             current_run += 1
+            # Use the max() function to update longest_run if necessary.
+            # This is a concise way to write an if statement that updates longest_run
+            # only if current_run is greater. Could also compare current_run to longest_run
+            # with an if statement and update longest_run inside the if block if current_run > longest_run.
             longest_run = max(longest_run, current_run)
         else:
             current_run = 0

@@ -96,8 +96,13 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 3. **Parallelism and recursion**
   - 3a - See longest_run in main.py
 
-  - 3b
+  - 3b - The work and span of this sequential algorithm: The work of an algorithm is the total number of operations it performs. In the for loop, we iterate through the list (all n elements of the array) and inside the loop it performs a constant number of operations (a comparison, an addition, a max operation, an assignment). Therefore total work is linear and proportional to n.
 
+    $W(n) = O(n)$
+
+    The span is the longest chain of dependent operations, representing the runtime with infinite processors. Our implementation in this algorithm is sequential (no parallelism). Therefore, span is also proportional to n.
+
+    $S(n) = O(n)
   - 3d
 
   - 3e
