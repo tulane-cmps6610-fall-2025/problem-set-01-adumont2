@@ -101,6 +101,7 @@ Here is the output from testing the `foo` function.
 ![Test code output for Problem 2](foo-test.jpg)
 *Figure 1: Test code output for Problem 2*
 ---
+
 3. **Parallelism and recursion**
   - 3a - See longest_run in main.py
 
