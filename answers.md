@@ -96,7 +96,11 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 
   **Output from testing**
 
-  ![Test code output for Problem 2](foo-test.jpg)
+Here is the output from testing the `foo` function.
+
+![Test code output for Problem 2](foo-test.jpg)
+
+This test confirms the base cases and a few recursive steps for the `foo` function.
 
 3. **Parallelism and recursion**
   - 3a - See longest_run in main.py
@@ -134,5 +138,9 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
   
   **Output from test code in main.py**
 
- ![Test code output for Problem 3](test-output.jpg)
+Here is the output from testing the recursive and iterative longest_run functions.
+
+![Test code output for Problem 3](test-output.jpg)
+
+See main.py for complete code.
 
