@@ -99,8 +99,6 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 Here is the output from testing the `foo` function.
 
 ![Test code output for Problem 2](foo-test.jpg)
-
-\FloatBarrier
 ---
 3. **Parallelism and recursion**
   - 3a - See longest_run in main.py
