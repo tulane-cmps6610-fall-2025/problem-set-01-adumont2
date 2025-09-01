@@ -94,7 +94,7 @@ $W(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 
 $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 
-  **Output from test code in main.py**
+  **Output from testing**
 
   ![Test code output for Problem 2](C:\Users\adumo\GitHub\problem-set-01-adumont2\foo-test.jpg)
 
