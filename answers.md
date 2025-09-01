@@ -103,7 +103,7 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 
     The span is the longest chain of dependent operations, representing the runtime with infinite processors. Our implementation in this algorithm is sequential (no parallelism). Therefore, span is also proportional to n.
 
-    $S(n) = O(n)
+    $S(n) = O(n)$
 
   - 3d
 
@@ -113,7 +113,7 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
     
     Therefore $W(n) = 2W(n/2) + O(1)$. 
     
-    Can use brick method that is leaf dominated. n= $s^h$ so $log_2(n) = log_2(2^h)$ and $h = log_2(n)$. Number of leaves = $2^h$ which is $2^(log_2(n))$ which is $n$. This simplifies to $W(n) \in O(n)$.
+    Can use brick method that is leaf dominated. n= $s^h$ so $log_2(n) = log_2(2^h)$ and $h = log_2(n)$. Number of leaves = $2^h$ which is $2^{log_2(n)}$ which is $n$. This simplifies to $W(n) \in O(n)$.
 
     **Span**: Span is the longest dependency path. As a result of the two recursive calls, longest_run_recursive(left_half, ...) and longest_run_recursive(right_half, ...) are still being run **sequentially**. Therefore the Span and Work are the same.
 
@@ -129,3 +129,5 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
     $S(n) = S(n/2) + O(1)$. We have shown above that the height of the tree, $h$, is $log_2(n)$ and the first level has a cost of 1. This simplifies to $S(n) \in O(logn)$. 
   
 4. **GCD**
+
+    **No fourth problem was included**
