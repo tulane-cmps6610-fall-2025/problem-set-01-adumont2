@@ -141,6 +141,7 @@ Here is the output from testing the `foo` function.
 Here is the output from testing the recursive and iterative longest_run functions.
 
 ![Test code output for Problem 3](test-output.jpg)
+
 *Figure 2: Test code output for Problem 3*
 ---
 
