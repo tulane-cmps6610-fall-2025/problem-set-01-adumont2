@@ -136,6 +136,3 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 
  ![Test code output for Problem 3](C:\Users\adumo\GitHub\problem-set-01-adumont2\test-output.jpg)
 
-4. **GCD**
-
-    **No fourth problem was included**
