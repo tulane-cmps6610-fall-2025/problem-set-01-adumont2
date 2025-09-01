@@ -96,7 +96,7 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 
   **Output from test code in main.py**
 
-  ![Test code output for Problem 2](C:\Users\adumo\GitHub\problem-set-01-adumont2\Foo test.jpg)
+  <img src="foo-test.jpg" alt="Test code output for Problem 2" width="80%">
 
 3. **Parallelism and recursion**
   - 3a - See longest_run in main.py
@@ -134,7 +134,7 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
   
   **Output from test code in main.py**
 
-  ![Test code output for Problem 3](C:\Users\adumo\GitHub\problem-set-01-adumont2\TestOutput.jpg)
+  <img src="test-output.jpg" alt="Test code output for Problem 3" width="80%">
 
 4. **GCD**
 
