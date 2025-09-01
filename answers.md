@@ -100,7 +100,7 @@ Here is the output from testing the `foo` function.
 
 ![Test code output for Problem 2](foo-test.jpg)
 
-\clearpage
+---
 
 3. **Parallelism and recursion**
   - 3a - See longest_run in main.py
@@ -142,7 +142,6 @@ Here is the output from testing the recursive and iterative longest_run function
 
 ![Test code output for Problem 3](test-output.jpg)
 
-\clearpage
-
+---
 
 
