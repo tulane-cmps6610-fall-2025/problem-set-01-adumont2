@@ -128,6 +128,10 @@ $S(a,b) = O(1) * O(log(min(a,b))) = O(log(min(a,b)))$
 
     $S(n) = S(n/2) + O(1)$. We have shown above that the height of the tree, $h$, is $log_2(n)$ and the first level has a cost of 1. This simplifies to $S(n) \in O(logn)$. 
   
+  **Output from test code in main.py**
+
+  ![Test code output for Problem 3]("C:\Users\adumo\GitHub\problem-set-01-adumont2\TestOutput.jpg")
+
 4. **GCD**
 
     **No fourth problem was included**
