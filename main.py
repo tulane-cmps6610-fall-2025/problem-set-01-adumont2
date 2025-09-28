@@ -56,13 +56,15 @@ class Result:
     
     
 def longest_run_recursive(mylist, key):
-    #Base case: If the list is empty or has one element, we can solve it directly.
-    if len(mylist) <=1:
-        if len(mylist) == 1 and mylist[0] == key:
-            # A list of one element that matches the key has a longest run of 1.
+    # Base case for an empty list
+    if len(mylist) == 0:
+        return Result(0, 0, 0, True) # Vacuously, the entire range matches
+
+    # Base case for a single-element list
+    if len(mylist) == 1:
+        if mylist[0] == key:
             return Result(1, 1, 1, True)
         else:
-            #Empt list or a list with one element that doesn't match the key has longest run of 0.
             return Result(0, 0, 0, False)
     
     #Recursive case: 
@@ -79,13 +81,13 @@ def longest_run_recursive(mylist, key):
 
     #Calculate the combined left_size.
     combined_left_size = left_result.left_size
-    if left_result.is_entire_range and len(left_half) > 0:
+    if left_result.is_entire_range: # The len > 0 check is removed
         combined_left_size += right_result.left_size
-    
+
     #Calculate the combined right_size.
     combined_right_size = right_result.right_size
-    if right_result.is_entire_range and len(right_half) > 0:
-        combined_right_size += left_result.right_size
+    if right_result.is_entire_range: # The len > 0 check is removed
+        combined_right_size += left_result.right_size   
     
     #Calculate the longest run that could cross the midpoint.
     cross_midpoint_run = left_result.right_size + right_result.left_size
